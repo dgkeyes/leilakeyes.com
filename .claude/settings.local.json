@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer create-project:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(herd link:*)",
+      "Bash(herd secure:*)",
+      "Bash(composer require:*)"
+    ]
+  }
+}

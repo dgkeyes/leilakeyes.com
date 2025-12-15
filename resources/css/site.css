@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../views";
+@source "../../content";
+
+:root {
+    --teal-bg: #2a9d8f;
+    --teal-dark: #238b7e;
+    --yellow-accent: #3b82f6;
+    --text-dark: #1a1a1a;
+    --text-muted: #4a4a4a;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background-color: var(--teal-bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+.font-serif-display {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Large decorative title */
+.site-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 0.9;
+    position: relative;
+}
+
+.site-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35%;
+    width: 80%;
+    height: 0.15em;
+    background-color: var(--yellow-accent);
+    z-index: -1;
+}
+
+/* Profile image */
+.profile-image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Year styling */
+.year-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(8rem, 20vw, 16rem);
+    font-weight: 400;
+    line-height: 0.85;
+    color: var(--text-dark);
+}
+
+.year-apostrophe {
+    font-size: 0.4em;
+    vertical-align: top;
+    margin-right: -0.1em;
+}
+
+/* Project list */
+.project-item {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 400;
+    font-style: italic;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover {
+    opacity: 0.7;
+}
+
+.project-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.6em;
+    font-style: normal;
+    color: var(--text-muted);
+    margin-right: 0.5rem;
+}
+
+/* Section labels */
+.section-label {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.section-label-bold {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* Job titles */
+.job-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.875rem;
+}
+
+.job-title-italic {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.job-title-bold {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* Contact links */
+.contact-link {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+/* Footer */
+.footer-text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
