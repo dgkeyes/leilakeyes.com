@@ -6,7 +6,8 @@
       "Bash(npm run build:*)",
       "Bash(herd link:*)",
       "Bash(herd secure:*)",
-      "Bash(composer require:*)"
+      "Bash(composer require:*)",
+      "Bash(php artisan vendor:publish:*)"
     ]
   }
 }
