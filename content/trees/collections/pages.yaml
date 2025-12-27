@@ -3,5 +3,8 @@ tree:
     entry: home
   -
     entry: baking
+    children:
+      -
+        entry: baking-thank-you
   -
     entry: charcuterie
