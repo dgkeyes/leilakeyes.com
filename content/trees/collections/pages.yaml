@@ -8,3 +8,6 @@ tree:
         entry: baking-thank-you
   -
     entry: charcuterie
+    children:
+      -
+        entry: charcuterie-thank-you

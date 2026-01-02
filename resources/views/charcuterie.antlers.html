@@ -3,9 +3,64 @@
         <h1 class="text-4xl font-serif-display font-bold">Charcuterie</h1>
     </header>
 
-    <section class="max-w-2xl mx-auto text-center">
-        <p class="text-xl leading-relaxed">
-            Leila makes custom charcuterie plates. More content coming soon!
-        </p>
+    <section class="max-w-2xl mx-auto">
+        <div class="text-center mb-12">
+            <p class="text-xl leading-relaxed">
+                Leila makes charcuterie plates for all occasions. Whether you're hosting a wine night, throwing a party, or just want an impressive spread for your next gathering, I can create the perfect plate for you. Choose from vegetarian or meat options, all made fresh with high-quality ingredients.
+            </p>
+        </div>
+
+        <div class="mb-12">
+            <img src="/img/charcuterie.jpeg" alt="Example charcuterie plate by Leila" class="rounded-lg shadow-lg mx-auto">
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-serif-display font-bold mb-6 text-center">Place an Order</h2>
+            <form name="charcuterie-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/charcuterie/charcuterie-thank-you">
+                <input type="hidden" name="form-name" value="charcuterie-order">
+                <p class="hidden">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium mb-2">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+                <div class="mb-4">
+                    <label for="address" class="block text-sm font-medium mb-2">Address</label>
+                    <textarea id="address" name="address" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="plate_type" class="block text-sm font-medium mb-2">Plate Type</label>
+                    <select id="plate_type" name="plate_type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="">Select a type</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Meat">Meat</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="quantity" class="block text-sm font-medium mb-2">Number of Plates</label>
+                    <input type="number" id="quantity" name="quantity" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="date_needed" class="block text-sm font-medium mb-2">Date Needed</label>
+                    <input type="date" id="date_needed" name="date_needed" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium mb-2">Special Requests</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-pink-700 font-semibold transition-colors">
+                    Submit Order
+                </button>
+            </form>
+        </div>
     </section>
 </div>
