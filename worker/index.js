@@ -21,6 +21,11 @@ export default {
             return Response.redirect(url.toString(), 301);
         }
 
+        // Leila's game lives on its own subdomain.
+        if (/^\/sabinelementary(\/|$)/i.test(url.pathname)) {
+            return Response.redirect("https://sabinelementary.leilakeyes.com/", 302);
+        }
+
         if (url.pathname === "/api/forms" && request.method === "POST") {
             return handleForm(request, env);
         }
